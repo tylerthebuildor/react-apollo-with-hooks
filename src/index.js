@@ -24,6 +24,7 @@ function NewWay() {
   if (error) return <div>Error</div>;
   return (
     <ul>
+      <h2>NEW WAY</h2>
       {data.pokemons.map((pokemon, index) => (
         <li key={index}>{pokemon.name}</li>
       ))}
@@ -38,6 +39,7 @@ class OldWay extends React.Component {
     if (error) return <div>Error</div>;
     return (
       <ul>
+        <h2>OLD WAY</h2>
         {data.pokemons.map((pokemon, index) => (
           <li key={index}>{pokemon.name}</li>
         ))}
@@ -53,14 +55,11 @@ class OldWay extends React.Component {
 ReactDOM.render(
   <ApolloProvider client={client}>
     <ApolloHooksProvider client={client}>
-      <h2>NEW WAY</h2>
       <Suspense fallback={<div>Loading...</div>}>
         <NewWay />
       </Suspense>
-
-      <h2>OLD WAY</h2>
-      <OldWay />
     </ApolloHooksProvider>
+    <OldWay />
   </ApolloProvider>,
   document.getElementById('root')
 );
