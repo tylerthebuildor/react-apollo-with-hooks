@@ -1,4 +1,4 @@
-# React Apollo vs React Apollo Hooks
+# Use React Apollo with Hooks - React Apollo vs React Apollo Hooks
 
 [Check out the blog post for more info](https://blog.tylerbuchea.com/use-react-apollo-with-hooks/)
 
