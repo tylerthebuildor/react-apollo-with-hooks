@@ -1,10 +1,12 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
-import { ApolloProvider, Query } from 'react-apollo';
-import { useQuery } from 'react-apollo-hooks';
 import gql from 'graphql-tag';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider, Query } from 'react-apollo';
+import {
+  ApolloProvider as ApolloHooksProvider,
+  useQuery,
+} from 'react-apollo-hooks';
 
 const client = new ApolloClient({
   uri: 'https://graphql-pokemon.now.sh/graphql',
